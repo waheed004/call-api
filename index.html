@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav">
+        <li><a href="{{url_for('index')}}">Program</a></li>
+
+        <li><a href="{{url_for('teacher')}}">Teacher</a></li>
+        
+
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+  <h1 class="label label-success">Horizontal form</h1>
+  <form class="form-horizontal" action="/intro" method="post" >
+
+
+
+ 
+
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Program Id:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="program_id" name="program_id">
+          {%for a in program_id%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+
+
+ <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Program Title:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="p_title" name="p_title">
+          {%for a in p_title%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+
+   <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Session Id:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="id_session" name="id_session">
+          {%for a in id_session%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+    
+
+
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Session Title:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="program" name="program">
+          {%for a in session_title%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+<div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Program Duration:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="p_session" name="p_session">
+          {%for a in p_session%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Year Duration:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="year" name="year">
+          {%for a in year%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
