@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav">
+        <li><a href="{{url_for('index')}}">Program</a></li>
+
+        <li><a href="{{url_for('teacher')}}">Teacher</a></li>
+        
+
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <h1 class="label label-success">Horizontal form</h1>
+  <form class="form-horizontal" action="/intro" method="post" >
+
+
+
+ 
+
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Teacher Id:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="teacher_id" name="teacher_id">
+          {%for a in teacher_id%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+<div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Teacher Name:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="teacher_name" name="teacher_name">
+          {%for a in teacher_name%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+<div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Teacher Designation:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="t_designation" name="t_designation">
+          {%for a in t_designation%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+ 
+<div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Teacher Type:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="t_type" name="t_type">
+          {%for a in t_type%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Teacher Permanant:</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="t_permanant" name="t_permanant">
+          {%for a in t_permanant%}
+          <option> {{a}} </option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
